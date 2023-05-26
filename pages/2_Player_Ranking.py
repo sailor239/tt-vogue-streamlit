@@ -13,7 +13,7 @@ st.set_page_config(
 
 @st.cache_data
 def get_players():
-    return requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-players').json()
+    return requests.get('https://ttvogue-2-h4703988.deta.app/get-players').json()
 
 players_raw = get_players()
 print('here')
