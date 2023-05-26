@@ -3,8 +3,6 @@ import pandas as pd
 import numpy as np
 import requests
 import json
-from streamlit_modal import Modal
-import streamlit.components.v1 as components
 
 
 st.set_page_config(
@@ -14,7 +12,7 @@ st.set_page_config(
 
 @st.cache_data
 def get_players():
-    return requests.get('http://127.0.0.1:8000/get-players').json()
+    return requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-players').json()
 
 players_raw = get_players()
 players_df = pd.DataFrame(players_raw['data'])
