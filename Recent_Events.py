@@ -15,7 +15,7 @@ st.set_page_config(
 
 @st.cache_data
 def get_events():
-    return requests.get('http://127.0.0.1:8000/get-events').json()
+    return requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-events').json()
 
 events_raw = get_events()
 
