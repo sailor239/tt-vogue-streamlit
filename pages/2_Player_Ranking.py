@@ -13,7 +13,7 @@ st.set_page_config(
 @st.cache_data
 def get_players():
     print(requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-players'))
-    return requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-players').json()
+    #return requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-players').json()
 
 players_raw = get_players()
 players_df = pd.DataFrame(players_raw['data'])
