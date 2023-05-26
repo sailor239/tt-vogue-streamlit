@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 import requests
 import json
-from streamlit_modal import Modal
-import streamlit.components.v1 as components
+# from streamlit_modal import Modal
+# import streamlit.components.v1 as components
 
 
 st.set_page_config(
