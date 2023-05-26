@@ -16,7 +16,7 @@ def get_players():
     try:
         res = requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-players')
         print(res)
-    exxcept:
+    except:
         print('error')
     
     #return requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-players').json()
