@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import requests
 import json
+import logging
 
 
 st.set_page_config(
@@ -12,7 +13,12 @@ st.set_page_config(
 
 @st.cache_data
 def get_players():
-    print(requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-players'))
+    try:
+        res = requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-players')
+        print(res)
+    exxcept:
+        print('error')
+    
     #return requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-players').json()
 
 players_raw = get_players()
