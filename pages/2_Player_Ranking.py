@@ -13,13 +13,7 @@ st.set_page_config(
 
 @st.cache_data
 def get_players():
-    try:
-        res = requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-players')
-        logging.info(res)
-    except:
-        logging.error('error')
-    
-    #return requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-players').json()
+    return requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-players').json()
 
 players_raw = get_players()
 print('here')
