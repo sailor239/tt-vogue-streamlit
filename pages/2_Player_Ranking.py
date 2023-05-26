@@ -15,13 +15,15 @@ st.set_page_config(
 def get_players():
     try:
         res = requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-players')
-        print(res)
+        logging.info(res)
     except:
-        print('error')
+        logging.error('error')
     
     #return requests.get('https://ttvoguebackend-1-s6475544.deta.app/get-players').json()
 
 players_raw = get_players()
+print('here')
+logging.info(players_raw)
 players_df = pd.DataFrame(players_raw['data'])
 players_df.rename(columns={'name': 'Name', 'point': 'Point'}, inplace=True)
 hide_table_row_index = """
